@@ -9,8 +9,7 @@ fun main() {
                 game.playGame()
             }
             "2" -> {
-                println("게임 기록은 아직 구현되지 않았습니다.")
-
+                GameRecord.displayRecord()
             }
             "3" -> {
                 println("게임을 종료합니다.")

@@ -2,6 +2,7 @@ import NumberCheckUtil.checkGuessNumber
 
 class NumberBaseballGame {
     private val answer: String = generateRandomNumber()
+    private var attempts = 0
 
     private fun generateRandomNumber(): String {
         while (true) {
@@ -13,9 +14,11 @@ class NumberBaseballGame {
     }
 
     fun playGame() {
+        println("< 게임을 시작합니다 >")
         while (true) {
             println("서로 다른 3자리의 수를 입력하세요:")
             val guess = readln()
+            attempts++
 
             if (!isValidGuess(guess)) {
                 println("3자리인지 확인해주세요, 각 자리의 수가 서로 달라야합니다.")
@@ -27,6 +30,7 @@ class NumberBaseballGame {
 
             if (strikes == 3) {
                 println("정답!: $answer")
+                GameRecord.recordGame(attempts)
                 break
             }
         }
