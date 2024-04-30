@@ -1,3 +1,5 @@
+package util
+
 object NumberCheckUtil {
     fun checkGuessNumber(answer: String, guess: String): Pair<Int, Int> {
         var strikes = 0

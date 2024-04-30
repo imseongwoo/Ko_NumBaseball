@@ -1,4 +1,5 @@
-import NumberCheckUtil.checkGuessNumber
+import util.GameRecord
+import util.NumberCheckUtil.checkGuessNumber
 
 class NumberBaseballGame {
     private val answer: String = generateRandomNumber()

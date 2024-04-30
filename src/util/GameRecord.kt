@@ -1,3 +1,5 @@
+package util
+
 object GameRecord {
     private val record = mutableListOf<Int>()
 
