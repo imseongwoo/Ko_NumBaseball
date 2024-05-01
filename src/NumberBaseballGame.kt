@@ -27,7 +27,11 @@ class NumberBaseballGame {
             }
 
             val (strikes, balls) = checkGuessNumber(answer, guess)
-            println("스트라이크: $strikes, 볼: $balls")
+            if (strikes == 0 && balls == 0 ) {
+                println("Nothing")
+            } else {
+                println("스트라이크: $strikes, 볼: $balls")
+            }
 
             if (strikes == 3) {
                 println("정답!: $answer")
